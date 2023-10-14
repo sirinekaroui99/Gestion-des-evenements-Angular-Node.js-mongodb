@@ -1,0 +1,268 @@
+*{
+    margin:0;
+    padding: 0;
+    }
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url('../../assets/image/images.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 150%; 
+}
+
+ 
+.navbar{
+    width: 1348px;
+    height: 75px;
+    margin: auto;
+    
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 200px;
+}
+
+
+.menu{
+    padding-left: 70px;
+    width:700px;
+    float: left;
+    height: 60px;
+    
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200 ;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px; 
+    border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn1-margin{
+    margin-left: 150px;
+}
+.btn2-margin{
+    margin-left: 10px;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin-top: -30px;
+    color: #fff;
+     
+}
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-top: 10%;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+
+ .content .cn a{
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+
+ }
+
+
+
+.content span{
+    color: #ff7200;
+    font-size: 60px;
+     
+}
+
+.form{
+    width: 500px;
+    height: auto;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    margin-top:  5%; 
+    left: 400px;
+    border-radius: 10px;
+    padding: 25px; 
+    opacity: 0.8;
+}
+
+.form h2{
+    width: 470px;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    margin: 2px;
+    padding: 8px;
+  
+
+}
+
+.hr-light{
+    border-top: 1px solid #fff;
+}
+
+hr {
+    margin-top: 1rem;
+    border: 0;
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.2em;
+    margin-block-end: -0.4em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+.form input{
+    width: 450px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 16px;
+    font-family: sans-serif;
+
+}
+
+.form input:focus{
+    outline: none;
+    padding-left: 5px;
+}
+
+::placeholder{
+    color: white;
+    opacity: 0.5;
+    font-family: Arial;
+    padding-left: 5px;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    margin-left: 25%;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+
+.btnn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.form .link a{ 
+    text-decoration: none;
+    color: #ff7200;
+}
+.mat-icon-username{
+    margin-bottom: -5px;
+    font-size: 29px;
+}
+
+.mat-icon-email {
+    margin-bottom: -7px;
+    margin-left: 1px;
+}
+
+.mat-icon-password {
+    margin-bottom: -7px;
+    margin-left: 1px;
+}
+
+.mat-icon-confirmpass{
+    margin-bottom: -8px;
+    margin-left: 1px;
+}
+.labeluser{
+    margin-left: 5px;
+    font-size: 17px;
+}
+.required-input {
+    border-bottom: 2px solid red;
+  }
+  
+  .required-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  button:disabled {
+    background-color: grey;
+    opacity: 0.7;
+    pointer-events: none;
+  }

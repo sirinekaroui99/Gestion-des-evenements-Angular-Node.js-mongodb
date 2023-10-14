@@ -1,0 +1,34 @@
+<div class="main"> 
+      <div class="content">
+        
+          <div class="form" [formGroup]="signup">
+           <h2>Créer un compte</h2>
+            <hr class="hr-light">
+            <mat-icon class="mat-icon-username" fontIcon="person"></mat-icon><input type="text" name="username" formControlName="username" id="" placeholder="Nom d'utilisateur">
+            
+            <mat-icon class="mat-icon-email" fontIcon="email"></mat-icon><input type="email" name="email" id="" formControlName="email" placeholder="Email@exemple.com" [class.required-input]="email.invalid && email.touched">
+             
+            <div *ngIf="email.invalid && email.touched" class="error-message">
+              <p class="required-text" *ngIf="email.errors?.['required']">L'adresse e-mail est obligatoire.</p>
+              <p class="required-text" *ngIf="email.errors?.['email']">L'adresse e-mail est invalide.</p>
+            </div>
+            <mat-icon class="mat-icon-password" fontIcon="lock"></mat-icon><input type="password" name="" id="" formControlName="password" placeholder="Mot de passe"[class.required-input]="password.invalid && password.touched">
+            <div *ngIf="password.invalid && password.touched" class="required-text">Ce champ est obligatoire et doit contenir au moins 6 caractères</div>
+            <mat-icon class="mat-icon-confirmpass" fontIcon="lock"></mat-icon><input type="password" name="" id="" formControlName="confpassword" placeholder="Confirmer mot de passe" [class.required-input]="confpassword.invalid && confpassword.touched"><br>
+            <div *ngIf="confpassword.invalid && confpassword.touched" class="required-text">Ce champ est obligatoire</div>
+            <mat-icon style="margin-bottom: -5px; margin-left :2px" fontIcon="people"></mat-icon><label class="labeluser" [class.required-input]="role.invalid && role.touched"> Vous-êtes un: </label>
+            <input style="width:a 10%; height: 20px; width: 38px;" type="radio" id="html" value="membre" formControlName="role"><label class="label" >Membre</label>
+            <input style="width: 10%;height: 20px; width: 38px;" type="radio" id="html" value="participant" formControlName="role"><label style="margin-top: -15px;" >Participant</label><br>
+            <div *ngIf="role.invalid && role.touched" class="required-text">Ce champ est obligatoire</div>
+           
+            <button class="btnn" [disabled]="!signup.valid"><a (click)="Register()" >S'inscrire</a></button>
+
+            <p class="link">J'ai déja un compte<br>
+            <a href="http://localhost:4200/">Se connecter </a> ici</p>
+            
+          </div>
+          
+
+      </div>
+      
+    </div>

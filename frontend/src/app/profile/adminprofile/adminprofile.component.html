@@ -1,0 +1,24 @@
+<header>
+    <h1>Bienvenue {{username}}!</h1>
+    <button class="logout-btn" (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
+  </header>
+  
+  <mat-sidenav-container class="container">
+    
+    <mat-sidenav mode="side" opened>
+      <mat-nav-list>
+        <h3>Dashboard</h3>
+        <a mat-list-item href="/" ><mat-icon>home</mat-icon>Accueil</a>
+        <a mat-list-item href="/evenements"><mat-icon>event</mat-icon>Événements</a>
+        <a mat-list-item   style="pointer-events: none; color:rgb(131, 134, 134)" disabled><mat-icon>article</mat-icon>Actualités</a>
+        <h3>Espace Admin</h3>
+        <a mat-list-item (click)="gestion_profiles()"><mat-icon>account_circle</mat-icon>Gestion des profils</a>
+        <a mat-list-item  style="pointer-events: none; color:rgb(131, 134, 134)" disabled><mat-icon>dashboard</mat-icon>Gestion des actualités</a>
+        <a mat-list-item href="/evenements"><mat-icon>date_range</mat-icon>Gestion des événements</a>  
+      </mat-nav-list>
+    </mat-sidenav>
+    <div class="main-content">
+      <app-gestionprofils *ngIf="!actualites"></app-gestionprofils>
+      <app-gestionactualites *ngIf="actualites && !profiles"></app-gestionactualites>
+    </div>
+  </mat-sidenav-container>

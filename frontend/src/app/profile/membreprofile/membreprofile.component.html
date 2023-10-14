@@ -1,0 +1,26 @@
+<header>
+    <h1>Bienvenue {{username}}!</h1>
+    <button class="logout-btn" (click)="logout()"><mat-icon>logout</mat-icon>Logout</button>
+  </header>
+  
+  <mat-sidenav-container class="container">
+    
+    <mat-sidenav mode="side" opened>
+      <mat-nav-list>
+        <h3>Dashboard</h3>
+        <a mat-list-item href="/"><mat-icon>home</mat-icon>Accueil</a>
+        <a mat-list-item href="/evenements"><mat-icon>event</mat-icon>Événements</a>
+        <a mat-list-item  style="pointer-events: none; color:rgb(131, 134, 134)" disabled><mat-icon>article</mat-icon>Actualités</a>
+        <h3>Espace Utilisateur</h3>
+        <a mat-list-item disabled style="pointer-events: none; color:rgb(131, 134, 134)"><mat-icon>account_circle</mat-icon>Information profile</a>
+        <a mat-list-item (click)="calendrier()" ><mat-icon>date_range</mat-icon>Calendrier</a>
+        <a mat-list-item  (click)="cotisation()" style="pointer-events: none; color:rgb(131, 134, 134)"><mat-icon>attach_money</mat-icon>Cotisation</a>
+        
+      </mat-nav-list>
+    </mat-sidenav>
+    <div class="main-content">  
+        <app-calendar *ngIf="calendar"  ></app-calendar>
+        <app-ajout *ngIf="calendar" ></app-ajout>
+        <app-cotisation *ngIf="pay"></app-cotisation>
+    </div>
+  </mat-sidenav-container>

@@ -1,0 +1,39 @@
+<div class="dialog">
+    <h2 mat-dialog-title>Détails Événement</h2>
+    <button mat-icon-button class="add-to-calendar-btn" aria-label="Ajouter à mon calendrier" [mat-dialog-close]="true" (click)="AddEvent()" >
+      <mat-icon>event</mat-icon>
+      <span class="ajout">Ajouter l'événement à mon calendrier</span>
+    </button>
+<mat-dialog-content>
+    <div class="event-details">
+      <div class="event-detail-row">
+        <div class="event-detail-label">Nom:</div>
+        <div class="event-detail-value">{{ data.title }}</div>
+      </div>
+      <div class="event-detail-row">
+        <div class="event-detail-label">Chef d'action:</div>
+        <div class="event-detail-value">{{ data.chef }}</div>
+      </div>
+      <div class="event-detail-row">
+        <div class="event-detail-label">Date:</div>
+        <div class="event-detail-value">{{ data.date | date }}</div>
+      </div>
+      <div class="event-detail-row">
+        <div class="event-detail-label">Lieu:</div>
+        <div class="event-detail-value">{{ data.lieu }}</div>
+      </div>
+      <div class="event-detail-row">
+        <div class="event-detail-label">Description:</div>
+        <div class="event-detail-value">{{ data.description }}</div>
+      </div>
+    </div>
+  </mat-dialog-content>
+
+
+        <mat-dialog-actions>
+            <div mat-dialog-actions>
+                
+                <button class="cancel-btn" mat-button [mat-dialog-close]="true" style="margin-left: 500px;">Fermer</button>
+              </div>
+        </mat-dialog-actions>
+      </div> 

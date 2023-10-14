@@ -1,0 +1,49 @@
+<div class="profile-container">
+  <div class="profile-card">
+    <div class="event-list">
+      <h2>Ajouter un événement</h2>
+      <form [formGroup]="AddEventForm">
+        <div class="form-group">
+          <label for="event">Événement:</label>
+          <input type="text" id="event" name="event" class="form-control" formControlName="title">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Lieu:</label>
+          <input type="text" id="location" name="location" class="form-control" formControlName="lieu">
+        </div>
+        <div class="form-group">
+          <label for="time">Heure:</label>
+          <input type="time" id="time" name="time" class="form-control" formControlName="heure">
+        </div>
+        <div class="form-group">
+          <label for="date">Date début:</label>
+          <input type="date" id="date_debut" name="date_debut" class="form-control" (change)="onDateChange($event)">
+        </div>
+        <div class="form-group">
+          <label for="date">Date fin:</label>
+          <input type="date" id="date_fin" name="date_fin" class="form-control" (change)="onDateChange($event)">
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" class="form-control" formControlName="description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" (keydown.enter)="AddEvent()" (click)="AddEvent()">Ajouter</button>
+      </form>
+    </div>
+    <!--
+    <div class="ajout">
+      <a href="#">Ajouter un événement</a>
+    </div>-->
+    <!--
+    <div class="notes-section">
+      <div class="notes">
+        <h2>Notes</h2>
+        <div class="note-box">
+          <textarea></textarea>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</div>

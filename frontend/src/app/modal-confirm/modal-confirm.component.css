@@ -1,0 +1,155 @@
+.confirmation-dialog {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 24px;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+   
+  }
+  .message {
+    margin-top: 15px; 
+    color: #333;
+  }
+  .confirmation-dialog h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .confirmation-dialog p {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cancel-button,
+  .confirm-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-button:hover,
+  .confirm-button:hover {
+    background-color: #eee;
+  }
+   
+  h4 button:hover{
+    background-color: rgb(224, 223, 223);
+    border-radius: 25px;
+  }
+
+  mat-dialog-content{
+    background-color: #f1f1f1;
+  }
+
+
+  .actions {
+    display: flex; 
+    background-color: #f1f1f1;
+    }
+    
+    .actions button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+    .actionsOuiNon{
+      background-color: #f1f1f1;
+      display: flex;
+  justify-content: center;
+    }
+
+    .actionsOuiNon button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+
+      
+      }
+      .actionsOuiNon .yes{
+        margin-left: 25px ;
+        margin-bottom: 10px;
+      }
+
+      .actionsOuiNon .no{
+        margin-bottom: 10px;
+      }
+
+
+
+    .yes{
+        background-color: #28b953;
+        margin-left: 310px;
+    }
+
+    .actionsOuiNon .yes:hover{
+      background-color: #0ea800;
+    }
+
+    .yes:hover{
+      background-color: #0ea800;
+    }
+    .no{
+        background-color: #eb0000;
+        margin-left: 10px;
+    }
+    .no:hover{
+      background-color: #aa0202;
+    }
+    .actionsOuiNon .no:hover{
+      background-color: #aa0202;
+    }
+
+  .icon {
+    margin-right: 16px;
+    color: #f44336;
+    font-size: 80px;
+  }
+
+  header {
+    height: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #c6c8c9;
+    color: #fff;
+  }
+  header h4 {
+    margin-top: 13px;
+    margin-left: -5px;
+  }
+  .closeicon{
+    margin-left: 170px;
+    background-color: transparent;
+    border: none;
+    
+
+  }
+
+  .closeicon:hover{
+    background-color: rgb(167, 167, 167);
+    border-radius: 25px;
+  }

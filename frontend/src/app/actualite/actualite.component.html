@@ -1,0 +1,44 @@
+
+<div class="bg">
+
+
+  <div class="cardrow1" id="card"  *ngFor="let item of actualite; let i=index">
+
+    
+    <article id ="carte-1" class="carte" >
+      <header class='carte__miniature'>
+        <img src={{item.image}}>Parc.jpg
+      </header>
+      <div class="carte__date">
+        <span class="carte__date__jour">{{item.date}}</span>
+      </div>
+      <div class="carte__body">
+        <div class="carte__categorie">Photos</div>
+        <h2 class="carte__titre">{{item.title}}</h2>
+        <div class="carte___soustitre">{{item.soustitre}}</div>
+        <p class="carte__description">{{item.description}}</p>
+      <button><a href="">Plus <mat-icon  fontIcon="keyboard_arrow_right"></mat-icon></a></button>
+      </div>
+
+        
+      
+
+      <!--
+        <footer class='carte__footer'>
+        <i class="icon--time fa fa-hourglass-start"></i> 6 min
+        <i class="icon--comment fa fa-commenting"></i> 15 commentaires
+      </footer>
+      -->
+      
+    </article>
+    
+        
+    </div>
+    
+    <div class="cardrow2">
+    
+    </div>
+
+   </div>
+
+ 

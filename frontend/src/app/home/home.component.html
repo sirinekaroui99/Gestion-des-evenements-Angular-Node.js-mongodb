@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Webpage Design</title>
+  
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      
+      <div class="icon">
+        <img class="logo" src="../../assets/image/logo.png" alt="">
+      </div>
+
+      <div class="menu">
+        <ul>
+          
+          <li><a href="">ACCEUIL</a></li>
+          <li><a href="http://localhost:4200/actualites" style="pointer-events: none; color:rgb(131, 134, 134)">ACTUALITÉ </a></li>
+          <li><a href="http://localhost:4200/evenements">ÉVÈNEMENTS</a></li>
+          <li><a href="http://localhost:4200/#map">CONTACT</a></li>
+          <li><a *ngIf="connect && admin"  href="http://localhost:4200/admin">PROFILE</a></li>
+          <li><a *ngIf="connect && !admin"  href="http://localhost:4200/membre">PROFILE</a></li>
+          <li><a *ngIf="userGoogle"  href="http://localhost:4200/membre">PROFILE</a></li>
+
+        </ul>
+      </div>
+<!--
+  <input class="srch" type="search" name="" placeholder="Rechercher..." >
+        <a href="#"><button class="btn">Rechercher</button></a>
+
+-->
+
+
+      <div style="padding-bottom: 60px;" >
+        
+      </div>
+<div *ngIf="error"  class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong> {{error}}</strong>   
+</div>
+<div *ngIf="success" class="alert success">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>  
+  <strong>{{message}}</strong>  
+</div>
+      <div class="content">
+        <h1> QUI SOMMES-NOUS?<br> <br><span>JCI</span></h1>
+        <p class="par">La Jeune Chambre Internationale (JCI) <br>
+          est une fédération mondiale de 200 000 jeunes professionnels <br> et entrepreneurs,
+           âgés de 18 à 40 ans, répartis en près de 5 000 communautés <br> dans plus de 100 pays
+            à travers le monde.</p>
+        <button class="cn"><a href="#mission">Plus d'info <mat-icon style='font-size:33px' fontIcon="keyboard_arrow_right"></mat-icon></a></button>
+
+          <div class="form" [formGroup]="signin">
+           <h2>Connecter à votre compte</h2>
+            <hr class="hr-light">
+            <mat-icon class="mat-icon-email" fontIcon="person"></mat-icon><input type="email" formControlName="email" name="email"  id="" placeholder="Email@exemple.com">
+            <div *ngIf="email.invalid && email.touched" class="error-message">
+              <p class="required-text" *ngIf="email.errors?.['required']">L'adresse e-mail est obligatoire.</p>
+              <p class="required-text" *ngIf="email.errors?.['email']">L'adresse e-mail est invalide.</p>
+            </div>
+            <div *ngIf="adresse_incorrect" class="required-text">L’adresse e-mail que vous avez saisi(e) n’est pas associée à un compte.</div>
+            
+            <mat-icon class="mat-icon-password" fontIcon="lock"></mat-icon><input  type="password" formControlName="password" name="" id="password" placeholder="Mot de passe"><mat-icon class="show" (click)="show()" *ngIf="!showed">visibility_off</mat-icon><mat-icon class="show" *ngIf="showed" (click)="dontshow()" >visibility_on</mat-icon>
+            <div *ngIf="password_incorrect" class="required-text">Le mot de passe est incorrect.</div>
+            <button class="btnn"><a (keydown.enter)="login()"  (click)="login()">Se connecter</a></button>
+            <button class="google"><a class="googlelink" href="http://localhost:4200/auth"><mat-icon>Google</mat-icon>Connecter avec Google</a></button>
+   
+            <p class="link">Vous n'avez pas de compte<br>
+            <a href="http://localhost:4200/signup">S'inscrire </a> ici</p>
+            
+             
+              </div>
+          
+
+      </div>
+      
+
+    </div>
+  </div>
+
+  <div class="infocontent" >
+    <div class="info">
+      <img src="../../assets/image/mission.jpg" alt="" >
+      <div class="parright">
+        <h1 class="titreinfo" id="mission">NOTRE MISSION</h1>
+        <p>
+          Offrir au jeunes leaders des opportunités de développement du <br> leadership 
+          en leur donnant la capacité de créer des changements positifs.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="inforight">
+      <img class="imgright" src="../../assets/image/jci.jpg" alt="" >
+      <div class="parleft">
+        <h1 class="titreinfo"  >NOTRE VISION</h1>
+        <p>
+          Visant à être le principal réseau mondial de jeunes citoyens actifs, <br>
+          la JCI se donne pour mission d’offrir les opportunités de développement <br> nécessaires
+           aux jeunes afin de leur donner la capacité de créer des <br>«changements positifs». 
+           Chose que les membres de la JCI n’ont pas<br> manqué de faire.  Partout dans le monde,
+            ils sont actifs, dynamiques, <br>influents et occupent, généralement, des postes importants
+             dans leurs <br>sociétés respectives. <br>
+            Par ailleurs, l’exécution des programmes pour le «changement positif» <br> et 
+            l’organisation des manifestations font également partie <br> des activités de la JCI.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="infocredo">
+      <img class="imgcredo" src="../../assets/image/credo1.jpg" alt=""  >
+      <div class="parcredo">
+        <h1 class="titreinfo" >NOTRE CREDO</h1>
+        <p>
+          Nous croyons, <br><br>
+
+          * Que la foi en Dieu donne à la vie son véritable sens ;<br><br>
+          * Que la fraternité humaine transcende la souveraineté des nations ;<br><br>
+          * Que la liberté des individus et de l’entreprise assure mieux la justice <br> <br>  
+                économique ;<br><br>
+          * Que l’autorité doit s’appuyer sur la loi et non sur l’arbitraire ;<br><br>
+          * Que la personne humaine est la plus précieuse des richesses ;<br><br>
+          * Et que servir l’humanité constitue l’oeuvre la plus noble d’une vie.<<br><br>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+    <div class="contact" id="contact" [formGroup]="contact">
+        <h1>CONTACTEZ-NOUS</h1>
+        <Label aria-required="true">Email *</Label><br>
+        <input class="taille1" type="email" name="" id="" placeholder="Email@exemple.com" formControlName="mail" ><br>
+        <Label aria-required="true">Message *</Label><br>
+        <textarea class="taille2" rows="4" cols="25" required formControlName="msg"></textarea><br>
+        <button (click)="contacter()" >Envoyer</button>
+    </div>
+    <div id="map"> 
+      
+    </div> 
+</body>
+
+
+<footer></footer>
+
+</html>

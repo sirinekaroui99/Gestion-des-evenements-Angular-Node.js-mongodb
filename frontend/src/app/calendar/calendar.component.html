@@ -1,0 +1,38 @@
+<div class="profile-container">
+  
+  <div class="event-list">
+    <!--
+    <button class="ajout" (click)="sendData()" >Ajouter</button>-->
+    <h2>Prochains événements</h2>
+    
+    <table >
+      <thead>
+        <tr>
+          <th>Evénement</th>
+          <th>Date</th>
+          <th>Lieu</th>
+          <th>Description</th>
+          <th>Créateur</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of events">
+          <td>{{ event.summary }}</td>
+         
+          <td>{{ event.location}}</td>
+          <td>{{ event.description}}</td>
+          <td>{{ event.creator.email}}</td>
+          <td><button (click)="delete(event.id)" ><mat-icon>deleteEvent</mat-icon></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- 
+    <div class="notes">
+    <h2>Mes notes</h2>
+    <div class="note-box">
+      <textarea placeholder="Saisir une note..."></textarea>
+    </div>
+  </div>
+-->
+</div>

@@ -1,0 +1,67 @@
+<div *ngIf="delete">
+<header>
+<h4 mat-dialog-title >Confirmation de la suppression</h4>
+  <button mat-icon-button mat-dialog-close aria-label="Close dialog" class="closeicon">
+    <mat-icon>close</mat-icon>
+  </button>
+</header>
+      <mat-dialog-content>
+         
+        <div class="content">
+          <div class="icon">
+            <mat-icon>error_outline</mat-icon>
+          </div>
+          <p  class="message">Voulez-vous vraiment supprimer cet événement ?</p>
+        </div>
+      </mat-dialog-content>
+      
+      <mat-dialog-actions class="actions">
+        <button class="yes" mat-raised-button color="primary" (click)="onYes()">Confirmer</button>
+        <button class="no" mat-button mat-dialog-close (click)="onNo()" >Annuler</button>
+      </mat-dialog-actions>
+</div> 
+
+<div *ngIf="quitadd">
+  <header>
+  <h4 mat-dialog-title >Confirmation</h4>
+    <button mat-icon-button mat-dialog-close aria-label="Close dialog" class="closeicon">
+      <mat-icon>close</mat-icon>
+    </button>
+  </header>
+        <mat-dialog-content>
+           
+          <div class="content">
+            <div class="icon">
+              <mat-icon>error_outline</mat-icon>
+            </div>
+            <p  class="message">Voulez-vous vraiment quitter ?</p>
+          </div>
+        </mat-dialog-content>
+        
+        <mat-dialog-actions class="actionsOuiNon">
+          <button class="yes" mat-raised-button color="primary" (click)="onYes()">Oui</button>
+          <button class="no" mat-button mat-dialog-close (click)="onNo()" >Non</button>
+        </mat-dialog-actions>
+  </div>    
+  <div *ngIf="quitupdate">
+    <header>
+    <h4 mat-dialog-title >Confirmation</h4>
+      <button mat-icon-button mat-dialog-close aria-label="Close dialog" class="closeicon">
+        <mat-icon>close</mat-icon>
+      </button>
+    </header>
+          <mat-dialog-content>
+             
+            <div class="content">
+              <div class="icon">
+                <mat-icon>error_outline</mat-icon>
+              </div>
+              <p  class="message">Voulez-vous vraiment quitter ?</p>
+            </div>
+          </mat-dialog-content>
+          
+          <mat-dialog-actions class="actionsOuiNon">
+            <button class="yes" mat-raised-button color="primary" (click)="onYes()">Oui</button>
+            <button class="no" mat-button mat-dialog-close (click)="onNo()" >Non</button>
+          </mat-dialog-actions>
+    </div>   

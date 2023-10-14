@@ -1,0 +1,39 @@
+
+    <div class="table-container">
+        <table class="calendrier">
+            <caption>
+                <span class="huge">{{ currentDay }}</span> {{currentMonth}}
+            </caption>
+            <thead>
+                <th><abbr title="Lundi">Lun</abbr></th>
+                <th><abbr title="Mardi">Mar</abbr></th>
+                <th><abbr title="Mercredi">Mer</abbr></th>
+                <th><abbr title="Jeudi">Jeu</abbr></th>
+                <th><abbr title="Vendredi">Ven</abbr></th>
+                <th><abbr title="Samedi">Sam</abbr></th>
+                <th><abbr title="Manchedi">Dim</abbr></th>
+            </thead>
+            <tbody >
+                <tr >
+                    <td *ngFor="let jour of tab1"><span [ngClass]="jour == currentDay ? 'day current' : 'day'">{{jour}}</span></td>
+                    
+                </tr>
+                <tr>
+                    <td *ngFor="let jour of tab2"  ><span [ngClass]="jour == currentDay ? 'day current' : 'day'">{{jour}}</span></td>
+                    
+                </tr>
+                <tr>
+                    <td *ngFor="let jour of tab3"><span [ngClass]="jour == currentDay ? 'day current' : 'day'">{{jour}}</span></td>
+                    
+                </tr>
+                <tr>
+                    <td *ngFor="let jour of tab4"><span  [ngClass]="jour == currentDay ? 'day current' : 'day'">{{jour}}</span></td>
+                    
+                </tr>
+                <tr>
+                    <td *ngFor="let jour of tab5"><span [ngClass]="jour == currentDay ? 'day current' : 'day'">{{jour}}</span></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>

@@ -1,0 +1,165 @@
+.profile-container {
+    
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 0 50px; 
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .profile-card {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .event-list {
+    margin-left: 10px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-basis: 65%;
+    padding: 20px;
+    background-color: rgb(238, 231, 231);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-list h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  table {
+    width: 850px;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #f8f8f8;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    width: 30px;
+  }
+
+  td button {
+    background-color: rgb(209, 41, 41);
+    color: white; /* couleur du texte */
+    border: none; /* bordure */
+    padding: 5px 10px; /* espace intérieur */
+      
+    cursor: pointer; /* curseur de la souris */
+    border-radius: 4px; /* arrondi des coins */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .ajout{
+    position: relative;
+    margin-bottom : -20px;
+    margin-left: 758px;
+    background-color: #4CAF50; /* couleur de fond */
+  color: white; /* couleur du texte */
+  border: none; /* bordure */
+  padding: 10px 20px; /* espace intérieur */
+  text-align: center; /* centrage du texte */
+  text-decoration: none; /* pas de soulignement */
+   
+  font-size: 16px; /* taille de police */
+   
+  cursor: pointer; /* curseur de la souris */
+  border-radius: 4px; /* arrondi des coins */
+  }
+
+.ajout a{
+  color: inherit;
+  text-decoration: none;
+}
+  .ajout:hover {
+    background-color: #3e8e41; /* couleur de fond au survol */
+  }
+  .notes-section {
+    position: absolute;
+    flex-basis: 35%;
+    margin-top: 20px;
+    margin-left: 850px;
+    margin-bottom: 20px;
+  }
+  
+  .notes {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    margin-left: -40px;
+    padding: 20px;
+    background-color: rgb(238, 231, 231);;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notes h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  
+  .note-box textarea {
+    width: 90%;
+    height: 120px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .payment-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-basis: 100%;
+  }
+  
+  .payment {
+    flex-basis: 65%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .payment form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .payment label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .payment input[type="email"],
+  .payment input[type="number"],
+  .payment input[type="text"],
+  .payment select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  

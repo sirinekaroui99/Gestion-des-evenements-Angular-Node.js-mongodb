@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Gestion d'actualités</title> 
+</head>
+<body>
+	<header>
+		<h1>Gestion d'actualités</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Accueil</a></li>
+				<li><a href="#">Ajouter une actualité</a></li>
+				<li><a href="#">Liste des actualités</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Ajouter une actualité</h2>
+			<form>
+				<label for="titre">Titre :</label>
+				<input type="text" id="titre" name="titre">
+
+				<label for="contenu">Contenu :</label>
+				<textarea id="contenu" name="contenu"></textarea>
+
+                 
+                    <label for="news-image">Image</label>
+                    <input type="file" id="news-image" name="news-image">
+                
+
+				<label for="date">Date :</label>
+				<input type="date" id="date" name="date">
+
+				<button class="submit" type="submit">Ajouter</button>
+			</form>
+		</section>
+		<section>
+			<h2>Liste des actualités</h2>
+			<table>
+                <thead>
+                    
+                  <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Actualité 1</td>
+                    <td>Description de l'actualité 1</td>
+                    <td>01/01/2022</td>
+                    <td><img src="https://via.placeholder.com/150x150" alt="Image de l'actualité 1"></td>
+                    <td class="btn-group"> 
+                      <button class="btn btn-warn">Modifier</button>
+                      <button class="btn btn-danger">Supprimer</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Actualité 2</td>
+                    <td>Description de l'actualité 2</td>
+                    <td>02/01/2022</td>
+                    <td><img src="https://via.placeholder.com/150x150" alt="Image de l'actualité 2"></td>
+                    <td class="btn-group"> 
+                      <button class="btn btn-warn">Modifier</button>
+                      <button class="btn btn-danger">Supprimer</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Actualité 3</td>
+                    <td>Description de l'actualité 3</td>
+                    <td>03/01/2022</td>
+                    <td><img src="https://via.placeholder.com/150x150" alt="Image de l'actualité 3"></td>
+                    <td class="btn-group"> 
+                      <button class="btn btn-warn">Modifier</button>
+                      <button class="btn btn-danger">Supprimer</button>
+                      <p></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 - Gestion d'actualités</p>
+	</footer>
+</body>
+</html>

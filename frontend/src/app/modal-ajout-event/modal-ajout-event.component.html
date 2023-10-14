@@ -1,0 +1,64 @@
+
+<div class="modal">
+    <div class="modal-content">
+      <header>
+<h4 class="titleadd" *ngIf="data.info === 'add'" mat-dialog-title >Ajouter une nouvelle événement<hr ></h4>
+<h4 class="titleupdate"  *ngIf="data.info === 'update'" mat-dialog-title >Modifier une événement<hr ></h4>
+   
+</header>
+
+      <form [formGroup]="AddEventForm">
+        <div class="form-group">
+          <label for="nom">Titre de l'événement : <span class="red-star">*</span></label>
+          <input type="text" id="nom" formControlName="title" [class.required-input]="title.invalid && title.touched" >
+           <div *ngIf="title.invalid && title.touched" class="required-text">Ce champ est obligatoire</div>
+        </div>
+        <div class="form-group">
+            <label for="chef-action">Chef d'action : <span class="red-star">*</span></label>
+            <input type="text" id="chef-action" formControlName="chef" [class.required-input]="chef.invalid && chef.touched">
+            <div *ngIf="chef.invalid && chef.touched" class="required-text">Ce champ est obligatoire</div>
+          </div>
+        <div class="form-group">
+          <label for="lieu">Lieu : <span class="red-star">*</span></label>
+          <input type="text" id="lieu" formControlName="lieu" [class.required-input]="lieu.invalid && lieu.touched">
+          <div *ngIf="lieu.invalid && lieu.touched" class="required-text">Ce champ est obligatoire</div>
+        </div>
+        <div class="form-group">
+          <label for="heure">Heure : <span class="red-star">*</span></label>
+          <select id="heure" formControlName="heure"  [class.required-input]="heure.invalid && heure.touched">
+            <option value="" selected disabled>Choisir une heure</option>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="13:00">18:00</option>
+            <option value="14:00">19:00</option>
+            <option value="15:00">20:00</option>
+            <option value="16:00">21:00</option>
+            <option value="17:00">22:00</option>
+          </select>
+          <div *ngIf="heure.invalid && heure.touched" class="required-text">Ce champ est obligatoire</div>
+        </div>
+        <div class="form-group">
+          <label for="description">Description : <span class="red-star">*</span></label>
+          <textarea id="description" formControlName="description" rows="4" [class.required-input]="description.invalid && description.touched"></textarea>
+          <div *ngIf="description.invalid && description.touched" class="required-text">Ce champ est obligatoire</div>
+        </div>
+        
+        
+        <div class="button-group">
+            <button *ngIf="data.info === 'add'" type="submit" id="submit" class="add-btn" (click)="AddEvent()" [disabled]="!AddEventForm.valid" (keydown.enter)="AddEvent()"  >Ajouter</button>
+            <button *ngIf="data.info === 'update'" type="submit" id="submit" class="update-btn" (click)="UpdateEvent()" [disabled]="!AddEventForm.valid" (keydown.enter)="UpdateEvent()" >Modifier</button>
+          <button type="button" class="cancel-btn"  mat-button  (click)="onClose(data.info)">Annuler</button>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+  

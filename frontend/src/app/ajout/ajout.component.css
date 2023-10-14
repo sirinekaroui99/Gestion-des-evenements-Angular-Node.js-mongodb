@@ -1,0 +1,103 @@
+.profile-container {
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.event-list {
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-basis: 65%;
+  padding: 20px;
+  background-color: rgb(238, 231, 231);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-list h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="time"],
+form input[type="date"],
+form textarea {
+display: block;
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-bottom: 10px;
+}
+
+form select {
+display: block;
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+margin-bottom: 10px;
+background-color: #fff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23666'%3E%3Cpath d='M4 8h24'/%3E%3Cpath d='M4 16h24'/%3E%3Cpath d='M4 24h24'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: right 8px center;
+background-size: 16px 16px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+form button[type="submit"] {
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float: right;
+}
+
+form button[type="submit"]:hover {
+background-color: #45a049;
+}
+
+form::after {
+content: "";
+clear: both;
+display: table;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 10px;
+}
+
+.card-content {
+  font-size: 16px;
+}

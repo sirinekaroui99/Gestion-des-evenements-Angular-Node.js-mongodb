@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<body *ngIf="profile">
+  <router-outlet></router-outlet>
+</body>
+<body *ngIf="home">
+    <router-outlet></router-outlet>
+</body>
+
+<body *ngIf="!home && !profile " >
+    
+  <div class="main" >
+    <div class="navbar">
+      <div class="icon">
+        <img class="logo" src="../../assets/image/logo.png" alt="">
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="">ACCEUIL</a></li>
+          <li><a href="http://localhost:4200/actualites" style="pointer-events: none; color:rgb(131, 134, 134)">ACTUALITÉ </a></li>
+          <li><a href="http://localhost:4200/evenements">ÉVÈNEMENTS</a></li>
+          <li><a href="http://localhost:4200/#contact">CONTACT</a></li>
+        </ul>
+      </div>
+ 
+      <div >
+        
+        <a *ngIf="!connect && !userGoogle" href="http://localhost:4200/signup"><button class="btn btn1-margin">S'inscrire</button></a>
+        <a  *ngIf="!connect && !userGoogle" href="http://localhost:4200/"><button class="btn btn2-margin">Se connecter</button></a>
+
+        <button *ngIf="connect" mat-button [matMenuTriggerFor]="menu" class="profile" ><mat-icon>person</mat-icon>Mon compte</button>
+        <button *ngIf="userGoogle" mat-button [matMenuTriggerFor]="menu" class="profile" ><mat-icon>person</mat-icon>Mon compte</button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="onProfileClick()" >Profile<mat-icon>personne</mat-icon></button>
+              <button mat-menu-item (click)="onLogoutClick()" >Logout<mat-icon>logout</mat-icon></button>
+            </mat-menu>
+
+        
+      </div>
+
+      <div class="content">
+        
+       <router-outlet></router-outlet>
+          
+
+      </div>
+      
+
+    </div>
+  </div>
+   
+       
+</body>
+
+
+</html>
+

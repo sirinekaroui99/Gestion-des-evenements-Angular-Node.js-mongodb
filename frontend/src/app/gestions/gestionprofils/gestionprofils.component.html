@@ -1,0 +1,68 @@
+<div class="container">
+    <h1>Gestion des utilisateurs</h1>
+    
+    <!-- Liste des utilisateurs -->
+    <div class="user-list">
+      <h2>Liste des utilisateurs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom de l'utilisateur</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="getUserById(user)">Modifier</button>
+              <button class="btn btn-danger" (click)="deleteUser($event,user)">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Formulaire pour ajouter/modifier un utilisateur -->
+    <div class="user-form" [formGroup]="addUserForm">
+      <mat-toolbar>
+        <span>Ajouter/modifier un utilisateur</span>
+        <span class="spacer"></span>
+        <button mat-icon-button class="mat-fab" aria-label="Add" (click)="retourAdd()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </mat-toolbar>
+      <form [formGroup]="addUserForm">
+        <div class="form-group"  >
+          <label for="username">Nom d'utilisateur</label>
+          <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" formControlName="username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email@exemple.om" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" placeholder="Mot de passe" formControlName="password">
+        </div>
+        <div class="form-group" id="update">
+          <label for="role">Role</label>
+              <select id="role" name="role" formControlName="role" (change)="onRoleChange($event)">
+                <option value="admin">admin</option>
+                <option value="membre">membre</option>
+                <option value="participant">participant</option>
+              </select>
+        </div>
+        <button *ngIf="add" class="btn btn-primary" (click)="addUser()">Enregistrer</button>
+        <button *ngIf="update" class="btn btn-primary" (click)="updateUser()">Modifier</button>
+      </form>
+    </div>
+    
+  </div>
+  <footer>
+		<p>&copy; 2023 - Gestion d'actualités</p>
+	</footer>
